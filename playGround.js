@@ -3,23 +3,22 @@ module.exports = {
   //param B : integer
   //return an integer
   maxSubarray: function (A, B) {
-    let sum = 0
-    let l = 0
     let count = 0
-    for(let r =0;r<A.length;r++){
-      sum += A[r]
+    for(let i =0;i<A.length;i++){
+      let sum = 0
+      for(let j = i;j<A.length;j++){
+        sum += A[j]
+        let len = j-i +1
 
-      while(sum>=B && l<=r){
-        sum -=A[l]
-        l++
+        if(len%2 === 0 && sum <B) count++
+        else if(len%2 !== 0 && sum >B) count++
       }
-      count +=(r-l+1)
     }
     return count
 
   },
 };
-A = [2, 5, 6];
-B = 10;
+A = [1, 2, 3, 4, 5];
+B = 4;
 
 console.log(module.exports.maxSubarray(A, B));
