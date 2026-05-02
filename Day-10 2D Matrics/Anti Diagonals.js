@@ -64,3 +64,42 @@ The third anti diagonal of the matrix is [3, 0, 0 ], the rest spaces shoud be fi
 
 ```;
 
+module.exports = {
+  diagonal: function (A) {
+    let n = A.length;
+    let ans = [];
+
+    // total anti-diagonals = 2*n - 1
+    for (let start = 0; start < 2 * n - 1; start++) {
+      let row = new Array(n).fill(0);
+
+      let i, j;
+
+      // starting points from top row
+      if (start < n) {
+        i = 0;
+        j = start;
+      }
+      // starting points from rightmost column
+      else {
+        i = start - n + 1;
+        j = n - 1;
+      }
+
+      let k = 0;
+
+      // move down-left
+      while (i < n && j >= 0) {
+        row[k] = A[i][j];
+        k++;
+        i++;
+        j--;
+      }
+
+      ans.push(row);
+    }
+
+    return ans;
+  },
+};
+

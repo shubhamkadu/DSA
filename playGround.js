@@ -2,23 +2,37 @@ module.exports = {
   //param A : array of integers
   //param B : integer
   //return an integer
-  maxSubarray: function (A, B) {
-    let count = 0
-    for(let i =0;i<A.length;i++){
-      let sum = 0
-      for(let j = i;j<A.length;j++){
-        sum += A[j]
-        let len = j-i +1
-
-        if(len%2 === 0 && sum <B) count++
-        else if(len%2 !== 0 && sum >B) count++
+  maxSubarray: function (A) {
+    let n = A.length;
+    let ans = [];
+    for (let start = 0; start < 2 * n - 1; start++) {
+      let rows = new Array(n).fill(0);
+      let i = 0;
+      let j = 0;
+      let k = 0;
+      if (start < n) {
+        i = 0;
+        j = start;
+      } else {
+        i = start - n + 1;
+        j = n - 1;
       }
-    }
-    return count
 
+      while (i < n && j >= 0) {
+        rows[k] = A[i][j];
+        k++
+        i++;
+        j--;
+      }
+      ans.push(rows)
+    }
+    return ans
   },
 };
-A = [1, 2, 3, 4, 5];
-B = 4;
+A = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
 
-console.log(module.exports.maxSubarray(A, B));
+console.log(module.exports.maxSubarray(A));
