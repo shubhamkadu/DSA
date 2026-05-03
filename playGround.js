@@ -2,37 +2,33 @@ module.exports = {
   //param A : array of integers
   //param B : integer
   //return an integer
-  maxSubarray: function (A) {
-    let n = A.length;
-    let ans = [];
-    for (let start = 0; start < 2 * n - 1; start++) {
-      let rows = new Array(n).fill(0);
-      let i = 0;
-      let j = 0;
-      let k = 0;
-      if (start < n) {
-        i = 0;
-        j = start;
-      } else {
-        i = start - n + 1;
-        j = n - 1;
+  matrics: function (A) {
+    let row = A.length
+    let col = A[0].length
+    let rowZero = new Array(row).fill(false)
+    let colZero = new Array(col).fill(false)
+    
+    for (let i = 0; i <A.length; i++) {
+      for(let j = 0;j<A[0].length;j++){
+        if(A[i][j] ==0){
+          rowZero[i] = true
+          colZero[j] = true
+        }
       }
-
-      while (i < n && j >= 0) {
-        rows[k] = A[i][j];
-        k++
-        i++;
-        j--;
-      }
-      ans.push(rows)
     }
-    return ans
+    
+    for (let i = 0; i <A.length; i++) {
+      for(let j = 0;j<A[0].length;j++){
+        if (rowZero[i] ||colZero[j]) {
+          A[i][j] = 0
+        }
+      }
+    }
+    return A
   },
 };
-A = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+A = [[1, 2, 3, 4], 
+     [5, 6, 7, 0], 
+     [9, 2, 3, 4]]
 
-console.log(module.exports.maxSubarray(A));
+console.log(module.exports.matrics(A));
