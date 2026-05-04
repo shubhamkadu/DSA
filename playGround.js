@@ -2,33 +2,22 @@ module.exports = {
   //param A : array of integers
   //param B : integer
   //return an integer
-  matrics: function (A) {
-    let row = A.length
-    let col = A[0].length
-    let rowZero = new Array(row).fill(false)
-    let colZero = new Array(col).fill(false)
+  solve: function (A) {
+    let first = A[0]
+    let result = ""
     
-    for (let i = 0; i <A.length; i++) {
-      for(let j = 0;j<A[0].length;j++){
-        if(A[i][j] ==0){
-          rowZero[i] = true
-          colZero[j] = true
+    for(let i=0;i<first.length;i++){
+      let char = first[i]
+      for(let j = 1;j<A.length;j++){
+        if(A[j][i] !==char){
+          return result
         }
       }
+      result +=char
     }
-    
-    for (let i = 0; i <A.length; i++) {
-      for(let j = 0;j<A[0].length;j++){
-        if (rowZero[i] ||colZero[j]) {
-          A[i][j] = 0
-        }
-      }
-    }
-    return A
+    return result
   },
 };
-A = [[1, 2, 3, 4], 
-     [5, 6, 7, 0], 
-     [9, 2, 3, 4]]
+A = ["a", "aefghijk", "abcefgh"];
 
-console.log(module.exports.matrics(A));
+console.log(module.exports.solve(A));
