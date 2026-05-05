@@ -1,23 +1,25 @@
 module.exports = {
-  //param A : array of integers
-  //param B : integer
+  //param A : string
   //return an integer
   solve: function (A) {
-    let first = A[0]
-    let result = ""
-    
-    for(let i=0;i<first.length;i++){
-      let char = first[i]
-      for(let j = 1;j<A.length;j++){
-        if(A[j][i] !==char){
-          return result
-        }
+    let fre = {}
+    for(let i = 0;i<A.length;i++){
+      if(fre[A[i]] == undefined){
+        fre[A[i]] = 1
+      }else{
+        fre[A[i]]++
       }
-      result +=char
     }
-    return result
+
+    let value = A.length/3
+    
+    for(let key in fre){
+      if(fre[key] >value){
+        return key
+      }
+    }
+    return -1
   },
 };
-A = ["a", "aefghijk", "abcefgh"];
-
+A = [1, 2, 3, 1, 1];
 console.log(module.exports.solve(A));

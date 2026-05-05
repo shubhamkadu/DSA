@@ -74,7 +74,7 @@ module.exports = {
     for (let i = 0; i < first.length; i++) {
       let char = first[i];
       for (let j = 1; j < A.length; j++) {
-        if (i >= A[j] || A[j][i] !== char) {
+        if (i >= A[j].length || A[j][i] !== char) {
           return result;
         }
       }

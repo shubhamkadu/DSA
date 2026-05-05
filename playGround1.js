@@ -12,11 +12,11 @@ function countMinPerfSquares(n) {
   let ans = INT_MAX;
   let i = 1;
 
-  while (i * i<=n) {
+  while (i * i <= n) {
     ans = Math.min(ans, 1 + countMinPerfSquares(n - i * i));
     i++;
   }
   memo[n] = ans;
   return memo[n];
 }
-console.log(countMinPerfSquares(A))
+console.log(countMinPerfSquares(A));
