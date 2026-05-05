@@ -1,25 +1,25 @@
 module.exports = {
   //param A : string
   //return an integer
-  solve: function (A) {
-    let fre = {}
-    for(let i = 0;i<A.length;i++){
-      if(fre[A[i]] == undefined){
-        fre[A[i]] = 1
-      }else{
-        fre[A[i]]++
+  solve: function (A, B) {
+    if (A.length !== B.length) return 0;
+    let fre = {};
+    for (let char of A) {
+      if (fre[char] == undefined) {
+        fre[char] = 1;
+      } else {
+        fre[char]++;
       }
     }
-
-    let value = A.length/3
-    
-    for(let key in fre){
-      if(fre[key] >value){
-        return key
+    for (let char of B) {
+      if (!fre[char]) {
+        return 0;
       }
+      fre[char]--;
     }
-    return -1
+    return 1;
   },
 };
-A = [1, 2, 3, 1, 1];
-console.log(module.exports.solve(A));
+A = "secure";
+B = "rescue";
+console.log(module.exports.solve(A, B));
