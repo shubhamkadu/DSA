@@ -1,25 +1,17 @@
 module.exports = {
-  //param A : string
+  //param A : intiger array
   //return an integer
-  solve: function (A, B) {
-    if (A.length !== B.length) return 0;
-    let fre = {};
-    for (let char of A) {
-      if (fre[char] == undefined) {
-        fre[char] = 1;
-      } else {
-        fre[char]++;
-      }
+  solve: function (A) {
+    let ans = Number.MIN_SAFE_INTEGER
+    let sum = 0
+    for(let i = 0;i<A.length;i++){
+      sum +=A[i]
+      ans = Math.max(ans, sum);
+      if (sum < 0) sum = 0;
     }
-    for (let char of B) {
-      if (!fre[char]) {
-        return 0;
-      }
-      fre[char]--;
-    }
-    return 1;
+    return ans
+   
   },
 };
-A = "secure";
-B = "rescue";
-console.log(module.exports.solve(A, B));
+A = [-2, 1, -3, 4, -1, 2, 1, -5, 4]; 
+console.log(module.exports.solve(A));
