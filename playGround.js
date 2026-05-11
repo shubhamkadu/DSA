@@ -12,7 +12,7 @@ module.exports = {
         pivotIndex = i;
         break;
       }
-    }
+    }   
 
     // reverse whole array if no pivot
     if (pivotIndex === -1) {
