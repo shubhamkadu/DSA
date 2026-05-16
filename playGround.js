@@ -1,11 +1,21 @@
 module.exports = {
-  //param A : intiger array
+  //param A : integer
+  //param B : array of integers
   //return an integer
-  solve: function (A) {
-    for (let i = 0; i < A.length; i++) {
-      console.log(A[i]);
+  solve: function (A, B) {
+    let seen = [];
+    for (let num of B) {
+      let target = A - num;
+      if (B.indexOf(target) !== -1) {
+        return 1;
+      }
+      seen.push(num);
     }
+
+    return 0;
   },
 };
-A = "010";
-console.log(module.exports.solve(A));
+
+A = 8;
+B = [3, 5, 1, 2, 1, 2];
+console.log(module.exports.solve(A,B));

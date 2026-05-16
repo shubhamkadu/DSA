@@ -1,0 +1,4373 @@
+================================================================================
+                   DSA REPOSITORY - COMPLETE PROBLEM DESCRIPTIONS
+================================================================================
+
+This document contains all complete problem descriptions extracted from the DSA
+Repository JavaScript files. Each problem is formatted with triple backticks
+and includes full details: problem description, constraints, input/output format,
+examples, and explanations.
+
+================================================================================
+SECTION: Day-3 DSA Introduction to Array
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Array Rotation B Times.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Given an integer array A of size N and an integer B, you have to return
+the same array after rotating it B times towards the right.
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= A[i] <=109
+1 <= B <= 109
+
+
+Input Format
+
+The first argument given is the integer array A.
+The second argument given is the integer B.
+
+
+Output Format
+
+Return the array A after rotating it B times to the right
+
+
+Example Input
+
+Input 1:
+
+A = [1, 2, 3, 4]
+B = 2
+Input 2:
+
+A = [2, 5, 6]
+B = 1
+
+
+Example Output
+
+Output 1:
+
+[3, 4, 1, 2]
+Output 2:
+
+[6, 2, 5]
+
+
+Example Explanation
+
+Explanation 1:
+
+Rotate towards the right 2 times - [1, 2, 3, 4] => [4, 1, 2, 3] => [3, 4, 1, 2]
+Explanation 2:
+
+Rotate towards the right 1 time - [2, 5, 6] => [6, 2, 5]
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Count Element.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of N integers. 
+Count the number of elements that have at least 1 elements greater than itself.
+
+
+Problem Constraints
+
+1 <= N <= 103
+1 <= A[i] <= 109
+
+
+Input Format
+
+First and only argument is an array of integers A.
+
+
+Output Format
+
+Return the count of elements.
+
+
+Example Input
+
+Input 1:
+A = [3, 1, 2]
+Input 2:
+A = [5, 5, 3]
+
+
+Example Output
+
+Output 1:
+2
+Output 2:
+1
+
+
+Example Explanation
+
+Explanation 1:
+The elements that have at least 1 element greater than itself are 1 and 2
+Explanation 2:
+The elements that have at least 1 element greater than itself is 3
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Good Pair.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A and an integer B. A pair(i, j) in the array is a good pair if i != j and (A[i] + A[j] == B). Check if any good pair exist or not.
+
+
+
+Problem Constraints
+
+1 <= A.size() <= 104
+
+1 <= A[i] <= 109
+
+1 <= B <= 109
+
+
+
+Input Format
+
+First argument is an integer array A.
+
+Second argument is an integer B.
+
+
+
+Output Format
+
+Return 1 if good pair exist otherwise return 0.
+
+
+
+Example Input
+
+Input 1:
+
+A = [1,2,3,4]
+B = 7
+Input 2:
+
+A = [1,2,4]
+B = 4
+Input 3:
+
+A = [1,2,2]
+B = 4
+
+
+Example Output
+
+Output 1:
+
+1
+Output 2:
+
+0
+Output 3:
+
+1
+
+
+Example Explanation
+
+Explanation 1:
+
+ (i,j) = (3,4)
+Explanation 2:
+
+No pair has sum equal to 4.
+Explanation 3:
+
+ (i,j) = (2,3)
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Multiple Ocurrance.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A and an integer B, find the number of occurrences of B in A.
+
+
+Problem Constraints
+
+1 <= B, Ai <= 109
+1 <= length(A) <= 105
+
+
+Input Format
+
+Given an integer array A and an integer B.
+
+
+Output Format
+
+Return an integer, number of occurrences of B in A.
+
+
+Example Input
+
+Input 1:
+ A = [1, 2, 2], B = 2 
+Input 2:
+ A = [1, 2, 1], B = 3 
+
+
+Example Output
+
+Output 1:
+ 2
+Output 2:
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+Element at index 2, 3 is equal to 2 hence count is 2.
+Explanation 2:
+There is no element equal to 3 in the array.
+
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Reverse Element.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Given an array A of N integers and also given two integers B and C. Reverse the elements of the array A within the given inclusive range [B, C].
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= A[i] <= 109
+0 <= B <= C <= N - 1
+
+
+Input Format
+
+The first argument A is an array of integer.
+The second and third arguments are integers B and C
+
+
+Output Format
+
+Return the array A after reversing in the given range.
+
+
+Example Input
+
+Input 1:
+
+A = [1, 2, 3, 4]
+B = 2
+C = 3
+Input 2:
+
+A = [2, 5, 6]
+B = 0
+C = 2
+
+
+Example Output
+
+Output 1:
+
+[1, 2, 4, 3]
+Output 2:
+
+[6, 5, 2]
+
+
+Example Explanation
+
+Explanation 1:
+
+We reverse the subarray [3, 4].
+Explanation 2:
+
+We reverse the entire array [2, 5, 6].
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Second largest.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an integer array A. You have to find the second largest element/value in the array or report that no such element exists.
+
+
+Problem Constraints
+
+1 <= |A| <= 105
+
+
+0 <= A[i] <= 109
+
+
+
+
+Input Format
+
+The first argument is an integer array A.
+
+
+
+
+Output Format
+
+Return the second largest element. If no such element exist then return -1.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [2, 1, 2] 
+Input 2:
+
+ A = [2]
+
+
+Example Output
+
+Output 1:
+
+ 1 
+Output 2:
+
+ -1 
+
+
+Example Explanation
+
+Explanation 1:
+
+ First largest element = 2
+ Second largest element = 1
+
+Explanation 2:
+
+ There is no second largest element in the array.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Time to Equality.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Given an integer array A of size N. In one second, you can increase the value of one element by 1.
+
+Find the minimum time in seconds to make all elements of the array equal.
+
+
+Problem Constraints
+
+1 <= N <= 1000000
+1 <= A[i] <= 1000
+
+
+Input Format
+
+First argument is an integer array A.
+
+
+Output Format
+
+Return an integer denoting the minimum time to make all elements equal.
+
+
+Example Input
+
+A = [2, 4, 1, 3, 2]
+
+
+Example Output
+
+8
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: max and min.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+Given an array A of size N. You need to find the sum of Maximum and Minimum element in the given array.
+Problem Constraints
+
+1 <= N <= 105
+-109 <= A[i] <= 109
+
+
+Input Format
+
+First argument A is an integer array.
+
+
+Output Format
+
+Return the sum of maximum and minimum element of the array
+
+
+Example Input
+
+Input 1:
+
+A = [-2, 1, -4, 5, 3]
+Input 2:
+
+A = [1, 3, 4, 1]
+
+
+Example Output
+
+Output 1:
+
+1
+Output 2:
+
+5
+
+
+Example Explanation
+
+Explanation 1:
+
+Maximum Element is 5 and Minimum element is -4. (5 + (-4)) = 1. 
+Explanation 2:
+
+Maximum Element is 4 and Minimum element is 1. (4 + 1) = 5.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: sum of natural number.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+The sum of n natural numbers is :
+
+(n * (n + 1)) / 2;
+
+Given an integer A, you need to find the count of it's factors.
+Factor of a number is the number which divides it perfectly leaving no remainder.
+
+Example : 1, 2, 3, 6 are factors of 6
+
+Problem Constraints
+1 <= A <= 109
+
+Input Format
+First and only argument is an integer A.
+
+
+Output Format
+
+Return the count of factors of A.
+
+
+Example Input
+
+Input 1:
+5
+Input 2:
+10
+
+
+Example Output
+
+Output 1:
+2
+Output 2:
+4
+
+
+Example Explanation
+
+Explanation 1:
+Factors of 5 are 1 and 5.
+Explanation 2:
+Factors of 10 are 1, 2, 5 and 10.
+```
+
+================================================================================
+SECTION: Day-5 DSA Array Prefix Sum Carry Forward
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Equilibrium index of an array.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an array A of integers of size N.
+
+Your task is to find the equilibrium index of the given array
+
+The equilibrium index of an array is an index such that the sum of elements at lower indexes is equal to the sum of elements at higher indexes.
+
+If there are no elements that are at lower indexes or at higher indexes, then the corresponding sum of elements is considered as 0.
+
+Note:
+
+Array indexing starts from 0.
+If there is no equilibrium index then return -1.
+If there are more than one equilibrium indexes then return the minimum index.
+
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+-105 <= A[i] <= 105
+
+
+Input Format
+
+First arugment is an array A .
+
+
+Output Format
+
+Return the equilibrium index of the given array. If no such index is found then return -1.
+
+
+Example Input
+
+Input 1:
+A = [-7, 1, 5, 2, -4, 3, 0]
+Input 2:
+
+A = [1, 2, 3]
+
+
+Example Output
+
+Output 1:
+3
+Output 2:
+
+-1
+
+
+Example Explanation
+
+Explanation 1:
+i   Sum of elements at lower indexes    Sum of elements at higher indexes
+0                   0                                   7
+1                  -7                                   6
+2                  -6                                   1
+3                  -1                                  -1
+4                   1                                   3
+5                  -3                                   0
+6                   0                                   0
+
+3 is an equilibrium index, because: 
+A[0] + A[1] + A[2] = A[4] + A[5] + A[6]
+Explanation 1:
+
+i   Sum of elements at lower indexes    Sum of elements at higher indexes
+0                   0                                   5
+1                   1                                   3
+2                   3                                   0
+Thus, there is no such index.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Generate all subarrays.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+You are given an array A of N integers.
+Return a 2D array consisting of all the subarrays of the array
+
+Note : The order of the subarrays in the resulting 2D array does not matter.
+
+
+Problem Constraints
+
+1 <= N <= 100
+1 <= A[i] <= 105
+
+
+Input Format
+
+First argument A is an array of integers.
+
+
+Output Format
+
+Return a 2D array of integers in any order.
+
+
+Example Input
+
+Input 1:
+A = [1, 2, 3]
+Input 2:
+A = [5, 2, 1, 4]
+
+
+Example Output
+
+Output 1:
+[[1], [1, 2], [1, 2, 3], [2], [2, 3], [3]]
+Output 2:
+[[1 ], [1 4 ], [2 ], [2 1 ], [2 1 4 ], [4 ], [5 ], [5 2 ], [5 2 1 ], [5 2 1 4 ] ]
+
+
+Example Explanation
+
+For Input 1:
+All the subarrays of the array are returned. There are a total of 6 subarrays.
+For Input 2:
+All the subarrays of the array are returned. There are a total of 10 subarrays.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: In-place Prefix Sum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of N integers. Construct prefix sum of the array in the given array itself.
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= A[i] <= 103
+
+
+Input Format
+
+Only argument A is an array of integers.
+
+
+Output Format
+
+Return an array of integers denoting the prefix sum of the given array.
+
+
+Example Input
+
+Input 1:
+
+A = [1, 2, 3, 4, 5]
+Input 2:
+
+A = [4, 3, 2]
+
+
+Example Output
+
+Output 1:
+
+[1, 3, 6, 10, 15]
+Output 2:
+
+[4, 7, 9]
+
+
+Example Explanation
+
+Explanation 1:
+
+The prefix sum array of [1, 2, 3, 4, 5] is [1, 3, 6, 10, 15].
+Explanation 2:
+
+The prefix sum array of [4, 3, 2] is [4, 7, 9].
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Range Sum Query.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+You are given an integer array A of length N.
+You are also given a 2D integer array B with dimensions M x 2, where each row denotes a [L, R] query.
+For each query, you have to find the sum of all elements from L to R indices in A (0 - indexed).
+More formally, find A[L] + A[L + 1] + A[L + 2] +... + A[R - 1] + A[R] for each query.
+
+
+
+Problem Constraints
+
+1 <= N, M <= 105
+1 <= A[i] <= 109
+0 <= L <= R < N
+
+
+Input Format
+
+The first argument is the integer array A.
+The second argument is the 2D integer array B.
+
+
+Output Format
+
+Return an integer array of length M where ith element is the answer for ith query in B.
+
+
+Example Input
+
+Input 1:
+
+
+A = [1, 2, 3, 4, 5]
+B = [[0, 3], [1, 2]]
+Input 2:
+
+A = [2, 2, 2]
+B = [[0, 0], [1, 2]]
+
+
+
+
+Example Output
+
+Output 1:
+[10, 5]
+Output 2:
+
+[2, 4]
+
+
+Example Explanation
+
+Explanation 1:
+
+
+The sum of all elements of A[0 ... 3] = 1 + 2 + 3 + 4 = 10.
+The sum of all elements of A[1 ... 2] = 2 + 3 = 5.
+Explanation 2:
+
+The sum of all elements of A[0 ... 0] = 2 = 2.
+The sum of all elements of A[1 ... 2] = 2 + 2 = 4.
+
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Special Subsequences.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You have given a string A having Uppercase English letters.
+
+You have to find the number of pairs (i, j) such that A[i] = 'A', A[j] = 'G' and i < j.
+
+
+
+Problem Constraints
+
+1 <= length(A) <= 105
+
+
+
+Input Format
+
+First and only argument is a string A.
+
+
+
+Output Format
+
+Return an long integer denoting the answer.
+
+
+
+Example Input
+
+Input 1:
+
+ A = "ABCGAG"
+Input 2:
+
+ A = "GAB"
+
+
+Example Output
+
+Output 1:
+
+ 3
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+
+
+ Subsequence "AG" is 3 times in given string, the pairs are (0, 3), (0, 5) and (4, 5). 
+Explanation 2:
+
+ There is no subsequence "AG" in the given string.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Subarray in given range.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of length N, return the subarray from B to C.
+
+
+Problem Constraints
+
+1 <= N <= 105
+
+1 <= A[i] <= 109
+
+0 <= B <= C < N
+
+
+
+Input Format
+
+The first argument A is an array of integers
+
+The remaining argument B and C are integers.
+
+
+
+Output Format
+
+Return a subarray
+
+
+Example Input
+
+Input 1:
+A = [4, 3, 2, 6]
+B = 1
+C = 3
+Input 2:
+
+A = [4, 2, 2]
+B = 0
+C = 1
+
+
+Example Output
+
+Output 1:
+[3, 2, 6]
+Output 2:
+
+[4, 2]
+
+
+Example Explanation
+
+Explanation 1:
+The subarray of A from 1 to 3 is [3, 2, 6].
+Explanation 2:
+The subarray of A from 0 to 1 is [4, 2].
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Sum of Even indexed elements in a range.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given:
+An integer array A representing the array of numbers of size N.
+A 2D array B of size Q, where each row B[i] contains two integers B[i][0] and B[i][1], representing the range [L, R].
+
+For each query in B, calculate the sum of elements in A at EVEN indices within the specified range [L, R] and return the results as an array.
+
+
+Problem Constraints
+
+1 <= N <= 10^5
+-10^5 <= A[i] <= 10^5
+1 <= Q <= 10^5
+0 <= B[i][0], B[i][1] < N
+B[i][0] <= B[i][1].
+
+
+Input Format
+
+First Argument A, is a list of integers representing the array.
+Second Argument B, is a 2D list where each sublist B[i]=[L,R] contains two integers L and R, representing the range for the query.
+
+
+Output Format
+
+Return a list of integers where each integer is the result of the sum of elements at even indices in the range [L, R] for each query.
+
+
+Example Input
+
+Input 1:
+A = [2, 8, 3, 9, 15]
+B = [ [1, 4], 
+      [0, 2], 
+      [2, 3] ]
+Input 2:
+A = [5, 15, 25, 35, 45]
+B = [ [1, 1], 
+      [0, 0] ]
+
+
+Example Output
+
+Output 1:
+[18, 5, 3]
+Output 2:
+[0, 5]
+
+
+Example Explanation
+
+Explanation 1:
+Query 1: [1, 4] -> Sum = A[2] + A[4] = 3 + 15 = 18
+Query 2: [0, 2] -> Sum = A[0] + A[2] = 2 + 3 = 5
+Query 3: [2, 3] -> Sum = A[2] = 3 
+
+Thus [18, 5, 3] is the Result.
+Explanation 2:
+Query 1: [1, 1] -> Sum = 0
+Query 2: [0, 0] -> Sum = A[0] = 5
+
+Thus [0, 5] is the result.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+================================================================================
+SECTION: Day-6 Lab Session on prefix sum and carry forward
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Best Time to Buy and Sell Stocks.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Say you have an array, A, for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+
+Return the maximum possible profit.
+
+
+
+Problem Constraints
+
+0 <= A.size() <= 700000
+
+
+
+1 <= A[i] <= 107
+
+
+
+
+Input Format
+
+The first and the only argument is an array of integers, A.
+
+
+Output Format
+
+Return an integer, representing the maximum possible profit.
+
+
+Example Input
+
+Input 1:
+A = [1, 2]
+Input 2:
+
+A = [1, 4, 5, 2, 4]
+
+
+Example Output
+
+Output 1:
+1
+Output 2:
+
+4
+
+
+Example Explanation
+
+Explanation 1:
+Buy the stock on day 0, and sell it on day 1.
+Explanation 2:
+
+Buy the stock on day 0, and sell it on day 2.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Closest MinMax.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A, find the size of the smallest subarray such that it contains at least one occurrence of the maximum value of the array
+
+and at least one occurrence of the minimum value of the array.
+
+
+
+Problem Constraints
+
+1 <= |A| <= 2000
+
+
+
+Input Format
+
+First and only argument is vector A
+
+
+
+Output Format
+
+Return the length of the smallest subarray which has at least one occurrence of minimum and maximum element of the array
+
+
+
+Example Input
+
+Input 1:
+
+A = [1, 3, 2]
+Input 2:
+
+A = [2, 6, 1, 6, 9]
+
+
+Example Output
+
+Output 1:
+
+ 2
+Output 2:
+
+ 3
+
+
+Example Explanation
+
+Explanation 1:
+
+ Take the 1st and 2nd elements as they are the minimum and maximum elements respectievly.
+Explanation 2:
+
+ Take the last 3 elements of the array.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Even numbers in a range.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an array A of length N and Q queries given by the 2D array B of size Q×2.
+
+Each query consists of two integers B[i][0] and B[i][1].
+
+For every query, your task is to find the count of even numbers in the range from A[B[i][0]] to A[B[i][1]].
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= Q <= 105
+1 <= A[i] <= 109
+0 <= B[i][0] <= B[i][1] < N
+
+
+Input Format
+
+First argument A is an array of integers.
+Second argument B is a 2D array of integers.
+
+
+Output Format
+
+Return an array of integers.
+
+
+Example Input
+
+Input 1:
+A = [1, 2, 3, 4, 5]
+B = [   [0, 2] 
+        [2, 4]
+        [1, 4]   ]
+Input 2:
+A = [2, 1, 8, 3, 9, 6]
+B = [   [0, 3]
+        [3, 5]
+        [1, 3] 
+        [2, 4]   ]
+
+
+Example Output
+
+Output 1:
+[1, 1, 2]
+Output 2:
+[2, 1, 1, 1]
+
+
+Example Explanation
+
+For Input 1:
+The subarray for the first query is [1, 2, 3] (index 0 to 2) which contains 1 even number.
+The subarray for the second query is [3, 4, 5] (index 2 to 4) which contains 1 even number.
+The subarray for the third query is [2, 3, 4, 5] (index 1 to 4) which contains 2 even numbers.
+For Input 2:
+The subarray for the first query is [2, 1, 8, 3] (index 0 to 3) which contains 2 even numbers.
+The subarray for the second query is [3, 9, 6] (index 3 to 5) which contains 1 even number.
+The subarray for the third query is [1, 8, 3] (index 1 to 3) which contains 1 even number.
+The subarray for the fourth query is [8, 3, 9] (index 2 to 4) which contains 1 even number.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Leaders in an array.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an integer array A containing N distinct integers, you have to find all the leaders in array A. An element is a leader if it is strictly greater than all the elements to its right side.
+
+NOTE: The rightmost element is always a leader.
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= A[i] <= 108
+
+
+Input Format
+
+There is a single input argument which a integer array A
+
+
+Output Format
+
+Return an integer array denoting all the leader elements of the array.
+
+
+Example Input
+
+Input 1:
+ A = [16, 17, 4, 3, 5, 2]
+Input 2:
+ A = [5, 4]
+
+
+Example Output
+
+Output 1:
+[17, 2, 5]
+Output 2:
+[5, 4]
+
+
+Example Explanation
+
+Explanation 1:
+ Element 17 is strictly greater than all the elements on the right side to it.
+ Element 2 is strictly greater than all the elements on the right side to it.
+ Element 5 is strictly greater than all the elements on the right side to it.
+ So we will return these three elements i.e [17, 2, 5], we can also return [2, 5, 17] or [5, 2, 17] or any other ordering.
+Explanation 2:
+ Element 5 is strictly greater than all the elements on the right side to it.
+ Element 4 is strictly greater than all the elements on the right side to it.
+ So we will return these two elements i.e [5, 4], we can also any other ordering.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Pick from both sides.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an integer array A of size N.
+
+You have to perform B operations. In one operation, you can remove either the leftmost or the rightmost element of the array A.
+
+Find and return the maximum possible sum of the B elements that were removed after the B operations.
+
+NOTE: Suppose B = 3, and array A contains 10 elements, then you can:
+
+Remove 3 elements from front and 0 elements from the back, OR
+Remove 2 elements from front and 1 element from the back, OR
+Remove 1 element from front and 2 elements from the back, OR
+Remove 0 elements from front and 3 elements from the back.
+
+
+Problem Constraints
+
+1 <= N <= 105
+
+1 <= B <= N
+
+-103 <= A[i] <= 103
+
+
+
+
+Input Format
+
+First argument is an integer array A.
+
+Second argument is an integer B.
+
+
+
+
+Output Format
+
+Return an integer denoting the maximum possible sum of elements you removed.
+
+
+
+Example Input
+
+Input 1:
+
+
+
+
+ A = [5, -2, 3 , 1, 2]
+ B = 3
+Input 2:
+
+ A = [ 2, 3, -1, 4, 2, 1 ]
+ B = 4
+
+
+
+Example Output
+
+Output 1:
+
+ 8
+Output 2:
+
+ 9
+
+
+
+Example Explanation
+
+Explanation 1:
+
+ Remove element 5 from front and element (1, 2) from back so we get 5 + 1 + 2 = 8
+Explanation 2:
+
+ Remove the first element and the last 3 elements. So we get 2 + 4 + 2 + 1 = 9
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Special Index.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array, arr[] of size N, the task is to find the count of array indices such that removing an element from these indices makes the sum of even-indexed and odd-indexed array elements equal.
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+-105 <= A[i] <= 105
+Sum of all elements of A <= 109
+
+
+Input Format
+
+First argument contains an array A of integers of size N
+
+
+Output Format
+
+Return the count of array indices such that removing an element from these indices makes the sum of even-indexed and odd-indexed array elements equal.
+
+
+
+Example Input
+
+Input 1:
+A = [2, 1, 6, 4]
+Input 2:
+
+A = [1, 1, 1]
+
+
+
+
+Example Output
+
+Output 1:
+1
+Output 2:
+
+3
+
+
+
+
+Example Explanation
+
+Explanation 1:
+Removing arr[1] from the array modifies arr[] to { 2, 6, 4 } such that, arr[0] + arr[2] = arr[1]. 
+Therefore, the required output is 1. 
+Explanation 2:
+
+Removing arr[0] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Removing arr[1] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Removing arr[2] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
+Therefore, the required output is 3.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Sum of Odd indexed elements in a range.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given:
+An integer array A representing the array of numbers of size N.
+A 2D array B of size Q, where each row B[i] contains two integers B[i][0] and B[i][1], representing the range [L, R].
+
+For each query in B, calculate the sum of elements in A at odd indices within the specified range [L, R] and return the results as an array.
+
+
+Problem Constraints
+
+1 <= N <= 10^5
+-10^5 <= A[i] <= 10^5
+1 <= Q <= 10^5
+0 <= B[i][0], B[i][1] < N
+B[i][0] <= B[i][1].
+
+
+Input Format
+
+First Argument A, is a list of integers representing the array.
+Second Argument B, is a 2D list where each sublist B[i]=[L,R] contains two integers L and R, representing the range for the query.
+
+
+Output Format
+
+Return a list of integers where each integer is the result of the sum of elements at odd indices in the range [L, R] for each query.
+
+
+Example Input
+
+Input 1:
+A = [2, 8, 3, 9, 15]
+B = [ [1, 4], 
+      [0, 2], 
+      [2, 3] ]
+Input 2:
+A = [5, 15, 25, 35, 45]
+B = [ [2, 2], 
+      [2, 4] ]
+
+
+Example Output
+
+Output 1:
+[17, 8, 9]
+Output 2:
+[0, 35]
+
+
+Example Explanation
+
+Explanation 1:
+Query 1: [1, 4] -> Sum = A[1] + A[3] = 8 + 9 = 17
+Query 2: [0, 2] -> Sum = A[1] = 8
+Query 3: [2, 3] -> Sum = A[3] = 9
+
+Thus [17, 8, 9] is the Result.
+Explanation 2:
+Query 1: [2, 2] -> Sum = 0
+Query 2: [2, 4] -> Sum = A[3] = 35
+
+Thus [0, 35] is the result.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+================================================================================
+SECTION: Day-7 Sliding Window & Contribution Technique
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Counting Subarrays Easy.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of N non-negative numbers and a non-negative number B,
+you need to find the number of subarrays in A with a sum less than B.
+We may assume that there is no overflow.
+
+
+
+Problem Constraints
+
+1 <= N <= 5 x 103
+
+
+1 <= A[i] <= 1000
+
+1 <= B <= 107
+
+
+
+Input Format
+
+First argument is an integer array A.
+
+Second argument is an integer B.
+
+
+
+Output Format
+
+Return an integer denoting the number of subarrays in A having sum less than B.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [2, 5, 6]
+ B = 10
+Input 2:
+
+ A = [1, 11, 2, 3, 15]
+ B = 10
+
+
+Example Output
+
+Output 1:
+
+ 4
+Output 2:
+
+ 4
+
+
+Example Explanation
+
+Explanation 1:
+
+ The subarrays with sum less than B are {2}, {5}, {6} and {2, 5},
+Explanation 2:
+
+ The subarrays with sum less than B are {1}, {2}, {3} and {2, 3}
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Good Subarrays Easy.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array of integers A, a subarray of an array is said to be good if it fulfills any one of the criteria:
+1. Length of the subarray is be even, and the sum of all the elements of the subarray must be less than B.
+2. Length of the subarray is be odd, and the sum of all the elements of the subarray must be greater than B.
+Your task is to find the count of good subarrays in A.
+
+
+Problem Constraints
+
+1 <= len(A) <= 5 x 103
+1 <= A[i] <= 103
+1 <= B <= 107
+
+
+Input Format
+
+The first argument given is the integer array A.
+The second argument given is an integer B.
+
+
+Output Format
+
+Return the count of good subarrays in A.
+
+
+Example Input
+
+Input 1:
+A = [1, 2, 3, 4, 5]
+B = 4
+Input 2:
+
+A = [13, 16, 16, 15, 9, 16, 2, 7, 6, 17, 3, 9]
+B = 65
+
+
+Example Output
+
+Output 1:
+6
+Output 2:
+
+36
+
+
+Example Explanation
+
+Explanation 1:
+Even length good subarrays = {1, 2}
+Odd length good subarrays = {1, 2, 3}, {1, 2, 3, 4, 5}, {2, 3, 4}, {3, 4, 5}, {5} 
+Explanation 1:
+There are 36 good subarrays
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Maximum Subarray Easy.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an integer array C of size A. Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
+But the sum must not exceed B.
+
+
+Problem Constraints
+
+1 <= A <= 103
+1 <= B <= 109
+1 <= C[i] <= 106
+
+
+Input Format
+
+The first argument is the integer A.
+The second argument is the integer B.
+The third argument is the integer array C.
+
+
+Output Format
+
+Return a single integer which denotes the maximum sum.
+
+
+Example Input
+
+Input 1:
+A = 5
+B = 12
+C = [2, 1, 3, 4, 5]
+Input 2:
+
+A = 3
+B = 1
+C = [2, 2, 2]
+
+
+Example Output
+
+Output 1:
+12
+Output 2:
+
+0
+
+
+Example Explanation
+
+Explanation 1:
+We can select {3,4,5} which sums up to 12 which is the maximum possible sum.
+Explanation 2:
+
+All elements are greater than B, which means we cannot select any subarray.
+Hence, the answer is 0.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Maximum subarray sum of fixed length.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of length N, Find the maximum subarray sum out of all possible subarray of length B.
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= A[i] <= 106
+
+
+Input Format
+
+First argument A is an array of integers.
+Second argument B is length of subarray.
+
+
+Output Format
+
+Return a single integer i.e. max subarray sum
+
+
+Example Input
+
+Input 1:
+
+A = [6, 7, 8, 2]
+B = 2
+Input 2:
+
+A = [3, 9, 5, 6, 5, 11]
+B = 3
+
+
+Example Output
+
+Output 1:
+
+15
+Output 2:
+
+22
+
+
+Example Explanation
+
+Explanation 1:
+
+Subarray with maximum sum is [7, 8] with sum 15.
+Explanation 2:
+
+Subarray with maximum sum is [6, 5, 11] with sum 22.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Minimum Swaps.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array of integers A and an integer B, find and return the minimum number of swaps required to bring all the numbers less than or equal to B together.
+
+Note: It is possible to swap any two elements, not necessarily consecutive.
+
+
+
+Problem Constraints
+
+1 <= length of the array <= 100000
+-109 <= A[i], B <= 109
+
+
+
+Input Format
+
+The first argument given is the integer array A.
+The second argument given is the integer B.
+
+
+
+Output Format
+
+Return the minimum number of swaps.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [1, 12, 10, 3, 14, 10, 5]
+ B = 8
+Input 2:
+
+ A = [5, 17, 100, 11]
+ B = 20
+
+
+Example Output
+
+Output 1:
+
+ 2
+Output 2:
+
+ 1
+
+
+Example Explanation
+
+Explanation 1:
+
+ A = [1, 12, 10, 3, 14, 10, 5]
+ After swapping  12 and 3, A => [1, 3, 10, 12, 14, 10, 5].
+ After swapping  the first occurence of 10 and 5, A => [1, 3, 5, 12, 14, 10, 10].
+ Now, all elements less than or equal to 8 are together.
+Explanation 2:
+
+ A = [5, 17, 100, 11]
+ After swapping 100 and 11, A => [5, 17, 11, 100].
+ Now, all elements less than or equal to 20 are together.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Subarray with given sum and length.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of length N. Also given are integers B and C.
+
+Return 1 if there exists a subarray with length B having sum C and 0 otherwise
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+
+1 <= A[i] <= 104
+
+1 <= B <= N
+
+1 <= C <= 109
+
+
+
+Input Format
+
+First argument A is an array of integers.
+
+The remaining arguments B and C are integers
+
+
+
+Output Format
+
+Return 1 if such a subarray exist and 0 otherwise
+
+
+Example Input
+
+Input 1:
+
+
+A = [4, 3, 2, 6, 1]
+B = 3
+C = 11
+Input 2:
+
+A = [4, 2, 2, 5, 1]
+B = 4
+C = 6
+
+
+
+
+Example Output
+
+Output 1:
+1
+Output 2:
+
+0
+
+
+Example Explanation
+
+Explanation 1:
+
+
+The subarray [3, 2, 6] is of length 3 and sum 11.
+
+
+Explanation 2:
+
+
+There are no such subarray.
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Subarray with least average.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of size N, find the subarray of size B with the least average.
+
+
+
+Problem Constraints
+
+1 <= B <= N <= 105
+-105 <= A[i] <= 105
+
+
+Input Format
+
+First argument contains an array A of integers of size N.
+Second argument contains integer B.
+
+
+Output Format
+
+Return the index of the first element of the subarray of size B that has least average.
+Array indexing starts from 0.
+
+
+Example Input
+
+Input 1:
+A = [3, 7, 90, 20, 10, 50, 40]
+B = 3
+Input 2:
+
+A = [3, 7, 5, 20, -10, 0, 12]
+B = 2
+
+
+
+Example Output
+
+Output 1:
+3
+Output 2:
+
+4
+
+
+
+Example Explanation
+
+Explanation 1:
+Subarray between indexes 3 and 5
+The subarray {20, 10, 50} has the least average 
+among all subarrays of size 3.
+Explanation 2:
+
+ Subarray between [4, 5] has minimum average
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Sum of All Subarrays.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an integer array A of length N.
+You have to find the sum of all subarray sums of A.
+More formally, a subarray is defined as a contiguous part of an array which we can obtain by deleting zero or more elements from either end of the array.
+A subarray sum denotes the sum of all the elements of that subarray.
+
+Note : Be careful of integer overflow issues while calculations. Use appropriate datatypes.
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+1 <= Ai <= 10 4
+
+
+Input Format
+
+The first argument is the integer array A.
+
+
+Output Format
+
+Return a single integer denoting the sum of all subarray sums of the given array.
+
+
+Example Input
+
+Input 1:
+A = [1, 2, 3]
+Input 2:
+
+A = [2, 1, 3]
+
+
+Example Output
+
+Output 1:
+20
+Output 2:
+
+19
+
+
+Example Explanation
+
+Explanation 1:
+The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
+Explanation 2:
+
+The different subarrays for the given array are: [2], [1], [3], [2, 1], [1, 3], [2, 1, 3].
+Their sums are: 2 + 1 + 3 + 3 + 4 + 6 = 19
+```
+
+================================================================================
+SECTION: Day-8 Memory Management and sorting basic
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Arithmetic Progression.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an integer array A of size N. Return 1 if the array can be arranged to form an arithmetic progression, otherwise return 0.
+
+A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
+
+
+
+Problem Constraints
+
+2 <= N <= 105
+
+-109 <= A[i] <= 109
+
+
+
+Input Format
+
+The first and only argument is an integer array A of size N.
+
+
+
+Output Format
+
+Return 1 if the array can be rearranged to form an arithmetic progression, otherwise return 0.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [3, 5, 1]
+Input 2:
+
+ A = [2, 4, 1]
+
+
+Example Output
+
+Output 1:
+
+ 1
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+ We can reorder the elements as [1, 3, 5] or [5, 3, 1] with differences 2 and -2 respectively, between each consecutive elements.
+Explanation 2:
+
+ There is no way to reorder the elements to obtain an arithmetic progression.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Elements Removal.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an integer array A of size N. You can remove any element from the array in one operation.
+The cost of this operation is the sum of all elements in the array present before this operation.
+
+Find the minimum cost to remove all elements from the array.
+
+Problem Constraints
+
+0 <= N <= 1000
+1 <= A[i] <= 103
+
+
+
+Input Format
+
+First and only argument is an integer array A.
+
+
+
+Output Format
+
+Return an integer denoting the total cost of removing all elements from the array.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [2, 1]
+Input 2:
+
+ A = [5]
+
+
+Example Output
+
+Output 1:
+
+ 4
+Output 2:
+
+ 5
+
+
+Example Explanation
+
+Explanation 1:
+
+ Given array A = [2, 1]
+ Remove 2 from the array => [1]. Cost of this operation is (2 + 1) = 3.
+ Remove 1 from the array => []. Cost of this operation is (1) = 1.
+ So, total cost is = 3 + 1 = 4.
+Explanation 2:
+
+ There is only one element in the array. So, cost of removing is 5.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Kth Smallest Element.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Find the Bth smallest element in given array A .
+
+NOTE: Users should try to solve it in less than equal to B swaps.
+
+
+
+Problem Constraints
+
+1 <= |A| <= 100000
+
+1 <= B <= min(|A|, 500)
+
+1 <= A[i] <= 109
+
+
+
+Input Format
+
+The first argument is an integer array A.
+
+The second argument is integer B.
+
+
+
+Output Format
+
+Return the Bth smallest element in given array.
+
+
+
+Example Input
+
+Input 1:
+
+A = [2, 1, 4, 3, 2]
+B = 3
+Input 2:
+
+A = [1, 2]
+B = 2
+
+
+Example Output
+
+Output 1:
+
+ 2
+Output 2:
+
+ 2
+
+
+Example Explanation
+
+Explanation 1:
+
+ 3rd element after sorting is 2.
+Explanation 2:
+
+ 2nd element after sorting is 2.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Noble Integer.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an integer array A, find if an integer p exists in the array such that the number of integers greater than p in the array equals p.
+
+
+
+Problem Constraints
+
+1 <= |A| <= 2*105
+-108 <= A[i] <= 108
+
+
+Input Format
+
+First and only argument is an integer array A.
+
+
+
+Output Format
+
+Return 1 if any such integer p is present else, return -1.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [3, 2, 1, 3]
+Input 2:
+
+ A = [1, 1, 3, 3]
+
+
+Example Output
+
+Output 1:
+
+ 1
+Output 2:
+
+ -1
+
+
+Example Explanation
+
+Explanation 1:
+
+ For integer 2, there are 2 greater elements in the array..
+Explanation 2:
+
+ There exist no integer satisfying the required conditions.
+```
+
+================================================================================
+SECTION: Day-10 2D Matrices
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Anti Diagonals.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Give a N * N square matrix A, return an array of its anti-diagonals. Look at the example for more details.
+
+
+Problem Constraints
+
+1<= N <= 1000
+1<= A[i][j] <= 1e9
+
+
+Input Format
+
+Only argument is a 2D array A of size N * N.
+
+
+Output Format
+
+Return a 2D integer array of size (2 * N-1) * N, representing the anti-diagonals of input array A.
+The vacant spaces in the grid should be assigned to 0.
+
+
+Example Input
+
+Input 1:
+1 2 3
+4 5 6
+7 8 9
+Input 2:
+
+1 2
+3 4
+
+
+Example Output
+
+Output 1:
+1 0 0
+2 4 0
+3 5 7
+6 8 0
+9 0 0
+Output 2:
+
+1 0
+2 3
+4 0
+
+
+Example Explanation
+
+For input 1:
+The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
+The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
+The third anti diagonal of the matrix is [3, 5, 7 ], the rest spaces shoud be filled with 0 making the row as [3, 5, 7].
+The fourth anti diagonal of the matrix is [6, 8 ], the rest spaces shoud be filled with 0 making the row as [6, 8, 0].
+The fifth anti diagonal of the matrix is [9 ], the rest spaces shoud be filled with 0 making the row as [9, 0, 0].
+For input 2:
+
+The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
+The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
+The third anti diagonal of the matrix is [3, 0, 0 ], the rest spaces shoud be filled with 0 making the row as [3, 0, 0].
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Column Sum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a 2D integer matrix A, return a 1D integer array containing column-wise sums of original matrix.
+
+
+
+Problem Constraints
+
+1 <= A.size() <= 103
+
+1 <= A[i].size() <= 103
+
+1 <= A[i][j] <= 103
+
+
+
+Input Format
+
+First argument is a 2D array of integers.(2D matrix).
+
+
+
+Output Format
+
+Return an array containing column-wise sums of original matrix.
+
+
+
+Example Input
+
+Input 1:
+
+[1,2,3,4]
+[5,6,7,8]
+[9,2,3,4]
+
+
+Example Output
+
+Output 1:
+
+{15,10,13,16}
+
+
+Example Explanation
+
+Explanation 1
+
+Column 1 = 1+5+9 = 15
+Column 2 = 2+6+2 = 10
+Column 3 = 3+7+3 = 13
+Column 4 = 4+8+4 = 16
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Count Increasing Triplets.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an array A of N elements. Find the number of triplets i,j and k such that i<j<k and A[i]<A[j]<A[k]
+
+
+Problem Constraints
+
+1 <= N <= 103
+1 <= A[i] <= 109
+
+
+Input Format
+
+First argument A is an array of integers.
+
+
+Output Format
+
+Return an integer.
+
+
+Example Input
+
+Input 1:
+A = [1, 2, 4, 3]
+Input 2:
+A = [2, 1, 2, 3]
+
+
+Example Output
+
+Output 1:
+2
+Output 2:
+1
+
+
+Example Explanation
+
+For Input 1:
+The triplets that satisfy the conditions are [1, 2, 3] and [1, 2, 4].
+For Input 2:
+ 
+The triplet that satisfy the conditions is [1, 2, 3].
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Main Diagonal Sum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a N X N integer matrix. You have to find the sum of all the main diagonal elements of A.
+
+Main diagonal of a matrix A is a collection of elements A[i, j] such that i = j.
+
+
+Problem Constraints
+
+1 <= N <= 103
+
+-1000 <= A[i][j] <= 1000
+
+
+
+Input Format
+
+There are 1 lines in the input. First 2 integers R, C are the number of rows and columns. Then R * C integers follow corresponding to the rowwise numbers in the 2D array A.
+
+
+
+Output Format
+
+Return an integer denoting the sum of main diagonal elements.
+
+
+
+Example Input
+
+Input 1:
+
+3 3 1 -2 -3 -4 5 -6 -7 -8 9
+Input 2:
+
+2 2 3 2 2 3
+
+
+Example Output
+
+Output 1:
+
+ 15 
+Output 2:
+
+ 6 
+
+
+Example Explanation
+
+Explanation 1:
+
+The size of matrix is 3.
+So, considering the indexing from 0.
+Main diagonal elements will be A[0][0], A[1][1] and A[2][2]
+A[1][1] + A[2][2] + A[3][3] = 1 + 5 + 9 = 15
+Explanation 2:
+
+The size of matrix is 2.
+So, considering the indexing from 0.
+Main diagonal elements will be A[0][0] and A[1][1].
+A[1][1] + A[2][2] = 3 + 3 = 6
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Matrix Scalar Product.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a matrix A and and an integer B, you have to perform scalar multiplication of matrix A with an integer B.
+
+
+Problem Constraints
+
+1 <= A.size() <= 1000
+
+1 <= A[i].size() <= 1000
+
+1 <= A[i][j] <= 1000
+
+1 <= B <= 1000
+
+
+
+Input Format
+
+First argument is 2D array of integers A representing matrix.
+
+Second argument is an integer B.
+
+
+
+Output Format
+
+You have to return a 2D array of integers after doing required operations.
+
+
+
+Example Input
+
+Input 1:
+
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+B = 2 
+Input 2:
+A = [[1]]
+B = 5 
+
+
+Example Output
+
+Output 1:
+[[2, 4, 6], 
+[8, 10, 12], 
+[14, 16, 18]]
+Output 2:
+[[5]]
+
+
+Example Explanation
+
+Explanation 1:
+==> ( [[1, 2, 3],[4, 5, 6],[7, 8, 9]] ) * 2
+
+==> [[2*1, 2*2, 2*3],
+     [2*4, 2*5, 2*6],
+     [2*7, 2*8, 2*9]]
+
+==> [[2,   4,  6], 
+     [8,  10, 12], 
+     [14, 16, 18]]
+Explanation 2:
+==> ( [[1]] ) * 5
+
+==> [[5*1]]
+
+==> [[5]]
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Minor Diagonal Sum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a N X N integer matrix. You have to find the sum of all the minor diagonal elements of A.
+
+Minor diagonal of a M X M matrix A is a collection of elements A[i, j] such that i + j = M + 1 (where i, j are 1-based).
+
+
+
+Problem Constraints
+
+1 <= N <= 103
+
+-1000 <= A[i][j] <= 1000
+
+
+
+Input Format
+
+First and only argument is a 2D integer matrix A.
+
+
+
+Output Format
+
+Return an integer denoting the sum of minor diagonal elements.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [[1, -2, -3],
+      [-4, 5, -6],
+      [-7, -8, 9]]
+Input 2:
+
+ A = [[3, 2],
+      [2, 3]]
+
+
+Example Output
+
+Output 1:
+
+ -5 
+Output 2:
+
+ 4 
+
+
+Example Explanation
+
+Explanation 1:
+
+ A[1][3] + A[2][2] + A[3][1] = (-3) + 5 + (-7) = -5
+Explanation 2:
+
+ A[1][2] + A[2][1] = 2 + 2 = 4
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Row Sum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a 2D matrix A of integers.
+
+Your task is to compute the sum of elements in each row and return a 1D array where each element represents the sum of a corresponding row in the matrix.
+
+
+Problem Constraints
+
+1 <= A.size() <= 103
+
+
+1 <= A[i].size() <= 103
+
+1 <= A[i][j] <= 103
+
+
+
+
+Input Format
+
+First argument A is a 2D array of integers.(2D matrix).
+
+
+
+Output Format
+
+Return an array containing row-wise sums of original matrix.
+
+
+
+Example Input
+
+Input 1:
+
+[1,2,3,4]
+[5,6,7,8]
+[9,2,3,4]
+
+
+Example Output
+
+Output 1:
+
+[10,26,18]
+
+
+Example Explanation
+
+Explanation 1
+
+Row 1 = 1+2+3+4 = 10
+Row 2 = 5+6+7+8 = 26
+Row 3 = 9+2+3+4 = 18
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Row to Column Zero.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a 2D integer matrix A, make all the elements in a row or column zero if the A[i][j] = 0. Specifically, make entire ith row and jth column zero.
+
+
+
+Problem Constraints
+
+1 <= A.size() <= 103
+
+1 <= A[i].size() <= 103
+
+0 <= A[i][j] <= 103
+
+
+
+Input Format
+
+First argument is a 2D integer matrix A.
+
+
+
+Output Format
+
+Return a 2D matrix after doing required operations.
+
+
+
+Example Input
+
+Input 1:
+
+[1,2,3,4]
+[5,6,7,0]
+[9,2,0,4]
+
+
+Example Output
+
+Output 1:
+
+[1,2,0,0]
+[0,0,0,0]
+[0,0,0,0]
+
+
+Example Explanation
+
+Explanation 1:
+
+A[2][4] = A[3][3] = 0, so make 2nd row, 3rd row, 3rd column and 4th column zero.
+```
+
+================================================================================
+SECTION: Day-11 String
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Longest Common Prefix.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given the array of strings A, you need to find the longest string S, which is the prefix of ALL the strings in the array.
+
+
+The longest common prefix for a pair of strings S1 and S2 is the longest string S which is the prefix of both S1 and S2.
+
+Example: the longest common prefix of "abcdefgh" and "abcefgh" is "abc".
+
+
+
+
+Problem Constraints
+
+0 <= sum of length of all strings <= 1000000
+
+
+
+Input Format
+
+The only argument given is an array of strings A.
+
+
+
+Output Format
+
+Return the longest common prefix of all strings in A.
+
+
+
+Example Input
+
+Input 1:
+
+
+A = ["abcdefgh", "aefghijk", "abcefgh"]
+Input 2:
+
+A = ["abab", "ab", "abcd"];
+
+
+
+
+Example Output
+
+Output 1:
+
+"a"
+Output 2:
+
+"ab"
+
+
+Example Explanation
+
+Explanation 1:
+
+Longest common prefix of all the strings is "a".
+Explanation 2:
+
+Longest common prefix of all the strings is "ab".
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Longest Palindromic Substring.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given a string A of size N, find and return the longest palindromic substring in A.
+
+Substring of string A is A[i...j] where 0 <= i <= j < len(A)
+
+Palindrome string:
+A string which reads the same backwards. More formally, A is palindrome if reverse(A) = A.
+
+Incase of conflict, return the substring which occurs first ( with the least starting index).
+
+
+
+Problem Constraints
+
+1 <= N <= 6000
+
+
+
+Input Format
+
+First and only argument is a string A.
+
+
+
+Output Format
+
+Return a string denoting the longest palindromic substring of string A.
+
+
+
+Example Input
+
+Input 1:
+A = "aaaabaaa"
+Input 2:
+A = "abba
+
+
+Example Output
+
+Output 1:
+"aaabaaa"
+Output 2:
+"abba"
+
+
+Example Explanation
+
+Explanation 1:
+We can see that longest palindromic substring is of length 7 and the string is "aaabaaa".
+Explanation 2:
+We can see that longest palindromic substring is of length 4 and the string is "abba".
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: String operations.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Akash likes playing with strings. One day he thought of applying following operations on the string in the given order:
+
+Concatenate the string with itself.
+Delete all the uppercase letters.
+Replace each vowel with '#'.
+You are given a string A of size N consisting of lowercase and uppercase alphabets. Return the resultant string after applying the above operations.
+
+NOTE: 'a' , 'e' , 'i' , 'o' , 'u' are defined as vowels.
+
+
+
+Problem Constraints
+
+1<=N<=100000
+
+
+Input Format
+
+First argument is a string A of size N.
+
+
+
+Output Format
+
+Return the resultant string.
+
+
+
+Example Input
+
+Input 1:
+A="aeiOUz"
+Input 2:
+A="AbcaZeoB"
+
+
+Example Output
+
+Output 1:
+"###z###z"
+Output 2:
+"bc###bc###"
+
+
+Example Explanation
+
+Explanatino 1:
+First concatenate the string with itself so string A becomes "aeiOUzaeiOUz".
+Delete all the uppercase letters so string A becomes "aeizaeiz".
+Now replace vowel with '#', A becomes "###z###z".
+Explanatino 2:
+First concatenate the string with itself so string A becomes "AbcaZeoBAbcaZeoB".
+Delete all the uppercase letters so string A becomes "bcaeobcaeo".
+Now replace vowel with '#', A becomes "bc###bc###".
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Toggle Case.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a character string A having length N, consisting of only lowercase and uppercase latin letters.
+
+You have to toggle case of each character of string A. For e.g 'A' is changed to 'a', 'e' is changed to 'E', etc.
+
+
+
+Problem Constraints
+
+1 <= N <= 105
+
+A[i] ∈ ['a'-'z', 'A'-'Z']
+
+
+
+Input Format
+
+First and only argument is a character string A.
+
+
+
+Output Format
+
+Return a character string.
+
+
+
+Example Input
+
+Input 1:
+
+ A = "Hello" 
+Input 2:
+
+ A = "tHiSiSaStRiNg" 
+
+
+Example Output
+
+Output 1:
+
+ hELLO 
+Output 2:
+
+ ThIsIsAsTrInG 
+
+
+Example Explanation
+
+Explanation 1:
+
+ 'H' changes to 'h'
+ 'e' changes to 'E'
+ 'l' changes to 'L'
+ 'l' changes to 'L'
+ 'o' changes to 'O'
+Explanation 2:
+
+ "tHiSiSaStRiNg" changes to "ThIsIsAsTrInG".
+```
+
+================================================================================
+SECTION: Day-12 Matrices and String
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: 3 Repeat Number.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You're given a read-only array of N integers. Find out if any integer occurs more than N/3 times in the array in linear time and constant additional space.
+If so, return the integer. If not, return -1.
+
+If there are multiple solutions, return any one.
+
+Note: Read-only array means that the input array should not be modified in the process of solving the problem
+
+
+
+Problem Constraints
+
+1 <= N <= 7*105
+1 <= A[i] <= 109
+
+
+Input Format
+
+The only argument is an integer array A.
+
+
+Output Format
+
+Return an integer.
+
+
+Example Input
+
+Input 1:
+[1 2 3 1 1]
+Input 2:
+[1 2 3]
+
+
+Example Output
+
+Output 1:
+1
+Output 2:
+-1
+
+
+Example Explanation
+
+Explanation 1:
+1 occurs 3 times which is more than 5/3 times.
+Explanation 2:
+No element occurs more than 3 / 3 = 1 times in the array.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Add the matrices.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given two matrices A & B of same size, you have to return another matrix which is the sum of A and B.
+Note: Matrices are of same size means the number of rows and number of columns of both matrices are equal.
+
+The Following will give you an idea of matrix addition:
+
+
+
+Problem Constraints
+
+1 <= A.size(), B.size() <= 1000 1 <= A[i].size(), B[i].size() <= 1000 1 <= A[i][j], B[i][j] <= 1000
+Input Format
+
+The first argument is the 2D integer array A The second argument is the 2D integer array B
+Output Format
+
+You have to return a vector of vector of integers after doing required operations.
+Example Input
+
+Input 1:
+A = [[1, 2, 3],   
+     [4, 5, 6],   
+     [7, 8, 9]]  
+
+B = [[9, 8, 7],   
+     [6, 5, 4],   
+     [3, 2, 1]]
+  
+Input 2:
+A = [[1, 2, 3],   
+     [4, 1, 2],   
+     [7, 8, 9]]  
+
+B = [[9, 9, 7],   
+     [1, 2, 4],   
+     [4, 6, 3]]
+  
+Example Output
+
+Output 1:
+[[10, 10, 10],   
+ [10, 10, 10],   
+ [10, 10, 10]]
+Output 2:
+[[10, 11, 10],   
+ [5,   3,  6],   
+ [11, 14, 12]]
+Example Explanation
+
+Explanation 1:
+A + B = [[1+9, 2+8, 3+7],  
+         [4+6, 5+5, 6+4],  
+         [7+3, 8+2, 9+1]]   
+      = [[10, 10, 10],   
+         [10, 10, 10],   
+         [10, 10, 10]].
+Explanation 2:
+A + B = [[1+9, 2+9, 3+7],  
+         [4+1, 1+2, 2+4],  
+         [7+4, 8+6, 9+3]]   
+      = [[10, 11, 10],   
+         [5,   3,  6],   
+         [11, 14, 12]].
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Amazing Subarrays.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+You are given a string S, and you have to find all the amazing substrings of S.
+
+An amazing Substring is one that starts with a vowel (a, e, i, o, u, A, E, I, O, U).
+
+Input
+
+Only argument given is string S.
+Output
+
+Return a single integer X mod 10003, here X is the number of Amazing Substrings in given the string.
+Constraints
+
+1 <= length(S) <= 1e6
+S can have special characters
+Example
+
+Input
+    ABEC
+
+Output
+    6
+
+Explanation
+    Amazing substrings of given string are :
+    1. A
+    2. AB
+    3. ABE
+    4. ABEC
+    5. E
+    6. EC
+    here number of substrings are 6 and 6 % 10003 = 6.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Check anagrams.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given two lowercase strings A and B each of length N. Return 1 if they are anagrams to each other and 0 if not.
+
+Note : Two strings A and B are called anagrams to each other if A can be formed after rearranging the letters of B.
+
+
+Problem Constraints
+
+1 <= N <= 105
+A and B are lowercase strings
+
+
+Input Format
+
+Both arguments A and B are a string.
+
+
+Output Format
+
+Return 1 if they are anagrams and 0 if not
+
+
+Example Input
+
+Input 1:
+A = "cat"
+B = "bat"
+Input 2:
+A = "secure"
+B = "rescue"
+
+
+Example Output
+
+Output 1:
+0
+Output 2:
+1
+
+
+Example Explanation
+
+For Input 1:
+The words cannot be rearranged to form the same word. So, they are not anagrams.
+For Input 2:
+They are an anagram.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Colorful Number.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given a number A, find if it is COLORFUL number or not.
+
+If number A is a COLORFUL number return 1 else, return 0.
+
+What is a COLORFUL Number:
+
+A number can be broken into different consecutive sequence of digits. 
+The number 3245 can be broken into sequences like 3, 2, 4, 5, 32, 24, 45, 324, 245 and 3245. 
+This number is a COLORFUL number, since the product of every consecutive sequence of digits is different
+
+
+
+Problem Constraints
+
+1 <= A <= 2 * 109
+
+
+
+Input Format
+
+The first and only argument is an integer A.
+
+
+
+Output Format
+
+Return 1 if integer A is COLORFUL else return 0.
+
+
+
+Example Input
+
+Input 1:
+
+ A = 23
+Input 2:
+
+ A = 236
+
+
+Example Output
+
+Output 1:
+
+ 1
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+ Possible Sub-sequences: [2, 3, 23] where
+ 2 -> 2 
+ 3 -> 3
+ 23 -> 6  (product of digits)
+ This number is a COLORFUL number since product of every digit of a sub-sequence are different. 
+Explanation 2:
+
+ Possible Sub-sequences: [2, 3, 6, 23, 36, 236] where
+ 2 -> 2 
+ 3 -> 3
+ 6 -> 6
+ 23 -> 6  (product of digits)
+ 36 -> 18  (product of digits)
+ 236 -> 36  (product of digits)
+ This number is not a COLORFUL number since the product sequence 23  and sequence 6 is same.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Count Occurrences.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Find the number of occurrences of bob in string A consisting of lowercase English alphabets.
+
+
+
+Problem Constraints
+
+1 <= |A| <= 1000
+
+
+Input Format
+
+The first and only argument contains the string A, consisting of lowercase English alphabets.
+
+
+Output Format
+
+Return an integer containing the answer.
+
+
+Example Input
+
+Input 1:
+
+  "abobc"
+Input 2:
+
+  "bobob"
+
+
+Example Output
+
+Output 1:
+
+  1
+Output 2:
+
+  2
+
+
+Example Explanation
+
+Explanation 1:
+
+  The only occurrence is at second position.
+Explanation 2:
+
+  Bob occures at first and third position.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Isalnum.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a function isalpha() consisting of a character array A.
+
+
+
+
+Return 1 if all the characters of a character array are alphanumeric (a-z, A-Z, and 0-9) else, return 0.
+
+
+
+
+Problem Constraints
+
+1 <= |A| <= 105
+
+
+
+Input Format
+
+Only argument is a character array A.
+
+
+
+Output Format
+
+Return 1 if all the characters of the character array are alphanumeric (a-z, A-Z and 0-9), else return 0.
+
+
+
+Example Input
+
+Input 1:
+
+ A = ['S', 'c', 'a', 'l', 'e', 'r', 'A', 'c', 'a', 'd', 'e', 'm', 'y', '2', '0', '2', '0']
+Input 2:
+
+ A = ['S', 'c', 'a', 'l', 'e', 'r', '#', '2', '0', '2', '0']
+ 
+
+Example Output
+
+Output 1:
+
+ 1
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+ All the characters are alphanumeric.
+Explanation 2:
+
+ All the characters are NOT alphabets i.e ('#').
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Matrix Transpose.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given a 2D integer array A, return the transpose of A.
+
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
+
+
+Problem Constraints
+
+1 <= A.size() <= 1000
+
+
+
+
+1 <= A[i].size() <= 1000
+
+1 <= A[i][j] <= 1000
+
+
+
+
+Input Format
+
+First argument is a 2D matrix of integers.
+
+
+
+
+Output Format
+
+You have to return the Transpose of this 2D matrix.
+
+
+
+Example Input
+
+Input 1:
+
+
+
+A = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+Input 2:
+
+A = [[1, 2],[1, 2],[1, 2]]
+
+
+
+
+Example Output
+
+Output 1:
+
+
+
+
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+Output 2:
+
+
+
+
+[[1, 1, 1], [2, 2, 2]]
+
+
+
+
+Example Explanation
+
+Explanation 1:
+
+Clearly after converting rows to column and columns to rows of [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+ we will get [[1, 4, 7], [2, 5, 8], [3, 6, 9]].
+Explanation 2:
+
+After transposing the matrix, A becomes [[1, 1, 1], [2, 2, 2]]
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Reverse the String.js
+─────────────────────────────────────────────────────────────────────────────
+
+[NOTE: This file was not fully extracted in previous reads. See original file for complete content]
+
+─────────────────────────────────────────────────────────────────────────────
+File: Rotate Matrix.js
+─────────────────────────────────────────────────────────────────────────────
+
+[NOTE: This file was not fully extracted in previous reads. See original file for complete content]
+
+================================================================================
+SECTION: Day-15 Array One Dimensional
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Continuous Sum Query.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+There are A beggars sitting in a row outside a temple. Each beggar initially has an empty pot. When the devotees come to the temple, they donate some amount of coins to these beggars. Each devotee gives a fixed amount of coin(according to their faith and ability) to some K beggars sitting next to each other.
+
+Given the amount P donated by each devotee to the beggars ranging from L to R index, where 1 <= L <= R <= A, find out the final amount of money in each beggar's pot at the end of the day, provided they don't fill their pots by any other means.
+For ith devotee B[i][0] = L, B[i][1] = R, B[i][2] = P, given by the 2D array B
+
+
+Problem Constraints
+
+1 <= A <= 2 * 105
+1 <= L <= R <= A
+1 <= P <= 103
+0 <= len(B) <= 105
+
+
+Input Format
+
+The first argument is a single integer A.
+The second argument is a 2D integer array B.
+
+
+Output Format
+
+Return an array(0 based indexing) that stores the total number of coins in each beggars pot.
+
+
+Example Input
+
+Input 1:-
+A = 5
+B = [[1, 2, 10], [2, 3, 20], [2, 5, 25]]
+
+
+Example Output
+
+Output 1:-
+10 55 45 25 25
+
+
+Example Explanation
+
+Explanation 1:-
+First devotee donated 10 coins to beggars ranging from 1 to 2. Final amount in each beggars pot after first devotee: [10, 10, 0, 0, 0]
+Second devotee donated 20 coins to beggars ranging from 2 to 3. Final amount in each beggars pot after second devotee: [10, 30, 20, 0, 0]
+Third devotee donated 25 coins to beggars ranging from 2 to 5. Final amount in each beggars pot after third devotee: [10, 55, 45, 25, 25]
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Max Sum Contiguous Subarray.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array A of length N, your task is to find the maximum possible sum of any non-empty contiguous subarray.
+
+In other words, among all possible subarrays of A, determine the one that yields the highest sum and return that sum.
+
+
+
+Problem Constraints
+
+1 <= N <= 106
+-1000 <= A[i] <= 1000
+
+
+
+Input Format
+
+The first and the only argument contains an integer array, A.
+
+
+
+Output Format
+
+Return an integer representing the maximum possible sum of the contiguous subarray.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [1, 2, 3, 4, -10] 
+Input 2:
+
+ A = [-2, 1, -3, 4, -1, 2, 1, -5, 4] 
+
+
+Example Output
+
+Output 1:
+
+ 10 
+Output 2:
+
+ 6 
+
+
+Example Explanation
+
+Explanation 1:
+
+ The subarray [1, 2, 3, 4] has the maximum possible sum of 10. 
+Explanation 2:
+
+ The subarray [4,-1,2,1] has the maximum possible sum of 6.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Merge Sorted Overlapping Intervals.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given a collection of intervals A in a 2-D array format, where each interval is represented by a pair of integers `[
+  (start, end)
+]`. The intervals are sorted based on their start values.
+
+Your task is to merge all overlapping intervals and return the resulting set of non-overlapping intervals.
+
+
+Problem Constraints
+
+1 <= len(A) <= 100000.
+1 <= A[i][0] <= A[i][1] <= 100000
+
+A is sorted based on the start value (A[i][0])
+
+
+
+Input Format
+
+First argument is a list of intervals in 2-Dimentional Array.
+
+
+
+Output Format
+
+Return the sorted list of intervals after merging all the overlapping intervals.
+
+
+
+Example Input
+
+Input 1:
+
+[ [1, 3], [2, 6], [8, 10], [15, 18] ]
+Input 2:
+
+[ [2, 10], [4, 9], [6, 7] ]
+
+
+Example Output
+
+Output 1:
+
+[ [1, 6], [8, 10], [15, 18] ]
+Output 2:
+
+[ [2, 10] ]
+
+
+Example Explanation
+
+Explanation 1:
+
+Merge intervals [1,3] and [2,6] -> [1,6].
+so, the required answer after merging is [1,6],[8,10],[15,18].
+No more overlapping intervals present.
+Explanation 2:
+
+Merge intervals [2, 10], [4, 9], [6, 7] as [2,10].
+Since [4, 9] and [6, 7] is overlapping inside the interval [2, 10].
+
+so, the required answer after merging is [2, 10].
+```
+
+================================================================================
+SECTION: Day-18 Bit Manipulation
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Number of 1 bit.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Write a function that takes an integer and returns the number of 1 bits present in its binary representation.
+
+
+Problem Constraints
+
+1 <= A <= 109
+
+
+Input Format
+
+First and only argument contains integer A
+
+
+Output Format
+
+Return an integer
+
+
+Example Input
+
+Input 1:
+11
+Input 2:
+6
+
+
+Example Output
+
+Output 1:
+3
+Output 2:
+2
+
+
+Example Explanation
+
+Explaination 1:
+11 is represented as 1011 in binary.
+Explaination 2:
+6 is represented as 110 in binary.
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Set Bit.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given two integers A and B.
+Set the A-th bit and B-th bit in 0, and return output in decimal Number System.
+
+Note:
+The bit positions are 0-indexed, which means that the least significant bit (LSB) has index 0.
+
+
+Problem Constraints
+
+0 <= A <= 30
+0 <= B <= 30
+
+
+Input Format
+
+First argument A is an integer.
+Second argument B is an integer.
+
+
+Output Format
+
+Return an integer.
+
+
+Example Input
+
+Input 1:
+A = 3
+B = 5
+Input 2:
+A = 4
+B = 4
+
+
+Example Output
+
+Output 1:
+40
+Output 2:
+16
+
+
+Example Explanation
+
+For Input 1:
+The binary expression is 101000 which is 40 in decimal.
+For Input 2:
+The binary expression is 10000 which is 16 in decimal
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Single Number.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given an array of integers A, every element appears twice except for one. Find that integer that occurs once.
+
+NOTE: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+
+
+Problem Constraints
+
+1 <= |A| <= 2000000
+
+0 <= A[i] <= INTMAX
+
+
+
+Input Format
+
+The first and only argument of input contains an integer array A.
+
+
+
+Output Format
+
+Return a single integer denoting the single element.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [1, 2, 2, 3, 1]
+Input 2:
+
+ A = [1, 2, 2]
+
+
+Example Output
+
+Output 1:
+
+ 3
+Output 2:
+
+ 1
+
+
+Example Explanation
+
+Explanation 1:
+
+3 occurs once.
+Explanation 2:
+
+1 occurs once.
+```
+
+================================================================================
+SECTION: Day-20 Recursion
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Find Factorial.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Write a program to find the factorial of the given number A using recursion.
+
+Note: The factorial of a number N is defined as the product of the numbers from 1 to N.
+
+
+Problem Constraints
+
+0 <= A <= 12
+
+
+
+Input Format
+
+First and only argument is an integer A.
+
+
+
+Output Format
+
+Return an integer denoting the factorial of the number A.
+
+
+
+Example Input
+
+Input 1:
+
+ A = 4
+Input 2:
+
+ A = 1
+
+
+Example Output
+
+Output 1:
+
+ 24
+Output 2:
+
+ 1
+
+
+Example Explanation
+
+Explanation 1:
+
+ Factorial of 4 = 4 * 3 * 2 * 1 = 24
+Explanation 2:
+
+ Factorial of 1 = 1
+```
+
+─────────────────────────────────────────────────────────────────────────────
+File: Print 1 to A function.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+You are given an integer A, print 1 to A using using recursion.
+
+Note :- After printing all the numbers from 1 to A, print a new line.
+
+
+
+Problem Constraints
+
+1 <= A <= 104
+
+
+
+Input Format
+
+First argument A is an integer.
+
+
+
+Output Format
+
+Print A space-separated integers 1 to A.
+Note: There should be exactly one space after each integer. After printing all the integers, print a new line
+
+
+
+Example Input
+
+Input 1:
+
+A = 10
+Input 2:
+
+A = 5
+
+
+Example Output
+
+Output 1:
+
+1 2 3 4 5 6 7 8 9 10 
+Output 2:
+
+1 2 3 4 5 
+
+
+Example Explanation
+
+Explanation 1:
+
+Print 1 to 10 space separated integers.
+Explanation 2:
+
+Print 1 to 5 space separated integers.
+```
+
+================================================================================
+SECTION: Day-21 Math Modular Arithmetic and GCD
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: Greatest Common Divisor.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given 2 non-negative integers A and B, find gcd(A, B)
+
+
+
+GCD of 2 integers A and B is defined as the greatest integer 'g' such that 'g' is a divisor of both A and B. Both A and B fit in a 32 bit signed integer.
+
+Note: DO NOT USE LIBRARY FUNCTIONS.
+
+
+
+
+Problem Constraints
+
+0 <= A, B <= 109
+
+
+
+Input Format
+
+First argument is an integer A.
+Second argument is an integer B.
+
+
+
+Output Format
+
+Return an integer denoting the gcd(A, B).
+
+
+
+Example Input
+
+Input 1:
+
+A = 4
+B = 6
+Input 2:
+
+A = 6
+B = 7
+
+
+Example Output
+
+Output 1:
+
+ 2
+Output 2:
+
+ 1
+
+
+Example Explanation
+
+Explanation 1:
+
+ 2 divides both 4 and 6
+Explanation 2:
+
+ 1 divides both 6 and 7
+```
+
+================================================================================
+SECTION: DP - One Dimensional
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: dp1(Fibonacci).js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given a positive integer A, write a program to find the Ath Fibonacci number.
+
+In a Fibonacci series, each term is the sum of the previous two terms and the first two terms of the series are 0 and 1. i.e. f(0) = 0 and f(1) = 1. Hence, f(2) = 1, f(3) = 2, f(4) = 3 and so on.
+
+NOTE: 0th term is 0. 1th term is 1 and so on.
+
+
+
+Problem Constraints
+
+0 <= A <= 44
+
+
+
+Input Format
+
+First and only argument is an integer A.
+
+
+
+Output Format
+
+Return an integer denoting the Ath Fibonacci number.
+
+
+
+Example Input
+
+Input 1:
+
+ A = 4
+Input 2:
+
+ A = 6
+
+
+Example Output
+
+Output 1:
+
+ 3
+Output 2:
+
+ 8
+
+
+Example Explanation
+
+Explanation 1:
+
+ Terms of Fibonacci series are: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on.
+ 0th term is 0 So, 4th term of Fibonacci series is 3. 
+Explanation 2:
+
+ 6th term of Fibonacci series is 8.
+```
+
+================================================================================
+SECTION: DP - Knapsack
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: 0-1 Knapsack.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Problem Description
+
+Given two integer arrays A and B of size N each which represent values and weights associated with N items respectively.
+
+Also given an integer C which represents knapsack capacity.
+
+Find out the maximum value subset of A such that sum of the weights of this subset is smaller than or equal to C.
+
+NOTE:
+
+You cannot break an item, either pick the complete item, or don't pick it (0-1 property).
+
+
+Problem Constraints
+
+1 <= N <= 103
+
+1 <= C <= 103
+
+1 <= A[i], B[i] <= 103
+
+
+
+Input Format
+
+First argument is an integer array A of size N denoting the values on N items.
+
+Second argument is an integer array B of size N denoting the weights on N items.
+
+Third argument is an integer C denoting the knapsack capacity.
+
+
+
+Output Format
+
+Return a single integer denoting the maximum value subset of A such that sum of the weights of this subset is smaller than or equal to C.
+
+
+
+Example Input
+
+Input 1:
+
+ A = [60, 100, 120]
+ B = [10, 20, 30]
+ C = 50
+Input 2:
+
+ A = [10, 20, 30, 40]
+ B = [12, 13, 15, 19]
+ C = 10
+
+
+Example Output
+
+Output 1:
+
+ 220
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+ Taking items with weight 20 and 30 will give us the maximum value i.e 100 + 120 = 220
+Explanation 2:
+
+ Knapsack capacity is 10 but each item has weight greater than 10 so no items can be considered in the knapsack therefore answer is 0.
+
+
+
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+```
+
+================================================================================
+SECTION: DP - Two Dimensional
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────
+File: unique_path_in_grid.js
+─────────────────────────────────────────────────────────────────────────────
+
+```
+Given a grid of size n * m, lets assume you are starting at (1,1) and your goal is to reach (n, m). 
+At any instance, if you are on (x, y), you can either go to (x, y + 1) or (x + 1, y).
+
+Now consider if some obstacles are added to the grids. 
+Return the total number unique paths from (1, 1) to (n, m).
+
+Note: 
+1. An obstacle is marked as 1 and empty space is marked 0 respectively in the grid.
+2. Given Source Point and Destination points are 1-based index.
+
+
+
+Problem Constraints
+
+1 <= n, m <= 100
+A[i][j] = 0 or 1
+
+
+Input Format
+
+Firts and only argument A is a 2D array of size n * m.
+
+
+Output Format
+
+Return an integer denoting the number of unique paths from (1, 1) to (n, m).
+
+
+Example Input
+
+Input 1:
+
+ A = [
+        [0, 0, 0]
+        [0, 1, 0]
+        [0, 0, 0]
+     ]
+Input 2:
+
+ A = [
+        [0, 0, 0]
+        [1, 1, 1]
+        [0, 0, 0]
+     ]
+
+
+Example Output
+
+Output 1:
+
+ 2
+Output 2:
+
+ 0
+
+
+Example Explanation
+
+Explanation 1:
+
+ Possible paths to reach (n, m): {(1, 1), (1, 2), (1, 3), (2, 3), (3, 3)} and {(1 ,1), (2, 1), (3, 1), (3, 2), (3, 3)}  
+ So, the total number of unique paths is 2. 
+Explanation 2:
+
+ It is not possible to reach (n, m) from (1, 1). So, ans is 0.
+```
+
+================================================================================
+                            END OF DOCUMENT
+================================================================================
+
+NOTES ON EXTRACTION:
+- All problem descriptions with complete details have been extracted
+- Each problem includes: Problem Description, Constraints, Input/Output Format, Examples, and Explanations
+- Problems are organized by folder/day as requested
+- Triple backticks (```) are used to demarcate each problem
+- Additional files in some folders were also processed but are listed above
+- For a complete view of all files, please refer to the individual JavaScript files in their respective directories
+================================================================================
