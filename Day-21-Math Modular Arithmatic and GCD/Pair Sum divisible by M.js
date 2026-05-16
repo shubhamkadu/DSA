@@ -1,0 +1,98 @@
+```
+Problem Description
+
+Given an array of integers A and an integer B, find and return the number of pairs in A whose sum is divisible by B.
+
+Since the answer may be large, return the answer modulo (109 + 7).
+
+Note: Ensure to handle integer overflow when performing the calculations.
+
+
+Problem Constraints
+
+1 <= length of the array <= 100000
+1 <= A[i] <= 109
+1 <= B <= 106
+
+
+
+Input Format
+
+The first argument given is the integer array A.
+The second argument given is the integer B.
+
+
+
+Output Format
+
+Return the total number of pairs for which the sum is divisible by B modulo (109 + 7).
+
+
+
+Example Input
+
+Input 1:
+
+ A = [1, 2, 3, 4, 5]
+ B = 2
+Input 2:
+
+ A = [5, 17, 100, 11]
+ B = 28
+
+
+Example Output
+
+Output 1:
+
+ 4
+Output 2:
+
+ 1
+
+
+Example Explanation
+
+Explanation 1:
+ All pairs which are divisible by 2 are (1,3), (1,5), (2,4), (3,5). 
+ So total 4 pairs.
+Explanation 2:
+ There is only one pair which is divisible by 28 is (17, 11)
+
+
+
+
+```;
+module.exports = {
+  //param A : array of integers
+  //param B : integer
+  //return an integer
+  solve: function (A, B) {
+    let n = A.length;
+    let fre = new Array(B).fill(0);
+    for (let ele of A) {
+      fre[ele % B]++;
+    }
+
+    let i = 1;
+    let j = B - 1;
+    let count = 0;
+    let mod = 1000000007;
+
+    // handle remainder 0
+    count += ((fre[0] * (fre[0] - 1)) / 2) % mod;
+
+    while (i < j) {
+      count += ((fre[i] * fre[j]) % mod) % mod;
+      i++;
+      j--;
+    }
+    if (i === j) {
+      count += ((fre[i] * (fre[i] - 1)) / 2) % mod;
+    }
+    return count % mod;
+  },
+};
+
+// time complexity: O(N + B)
+// space complexity: O(B)
