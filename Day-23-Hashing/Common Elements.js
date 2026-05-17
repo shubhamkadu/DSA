@@ -65,3 +65,30 @@ Explantion 2:
  Elements (2, 10) appears in both the array.
 
 ```;
+
+module.exports = {
+  //param A : array of integers
+  //param B : array of integers
+  //return a array of integers
+
+  solve: function (A, B) {
+    let freq = {};
+    let ans = [];
+
+    // count frequency from A
+    for (let num of A) {
+      freq[num] = (freq[num] || 0) + 1;
+    }
+
+    // check in B
+    for (let num of B) {
+      if (freq[num] > 0) {
+        ans.push(num);
+
+        freq[num]--;
+      }
+    }
+
+    return ans;
+  },
+};
