@@ -47,3 +47,26 @@ Explanation 1:
 Explanation 1:
 All the possible subarrays having sum 0.
 ```;
+
+
+module.exports = {
+  solve: function (A, B) {
+    let map = {};
+
+    map[0] = 1;
+
+    let sum = 0;
+    let result = 0;
+
+    for (let i = 0; i < A.length; i++) {
+      sum += A[i];
+
+      if (map[sum - B]) {
+        result += map[sum - B];
+      }
+      map[sum] = (map[sum] || 0) + 1;
+    }
+    return result;
+  },
+};
+
