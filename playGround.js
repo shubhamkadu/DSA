@@ -2,23 +2,36 @@ module.exports = {
   //param A : integer
   //param B : array of integers
   //return an integer
-  solve: function (A, B) {
-    let map = {}
-    map[0] = 1
-    let result = 0
-    let sum = 0
-    for(let i = 0;i<A.length;i++){
-      sum +=A[i]
-      if(map[sum-B]){
-        result +=map[sum-B]
-      }
-      map[sum] = (map[sum]||0)+1
+  solve: function (A) {
 
+    function maxLength(arr){
+      let max = 0
+      for(let i = 0;i<A.length;i++){
+        if(arr[i]>max) max = arr[i]
+      }
+      return max
     }
-    return result
+
+    let maxlen = maxLength(A);
+    let freArr = new Array(maxlen + 1).fill(0);
+    console.log(freArr);
+
+    for (let i = 0; i < A.length; i++) {
+      freArr[A[i]]++;
+    }
+
+    let idx = 0
+    for(let i = 0;i<freArr.length;i++){
+      let f = freArr[i]
+      for(let k = 0;k<f;k++){
+        A[idx] = i
+        idx++
+      }
+    }
+    return A
   },
 };
 
-A = [1,0,1]
-B = 1
-console.log(module.exports.solve(A,B));
+A = [10,8,9];
+
+console.log(module.exports.solve(A));
