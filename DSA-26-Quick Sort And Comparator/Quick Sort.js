@@ -45,7 +45,7 @@ Return the sorted array.
 module.exports = {
   //param A : array of integers
   //return a array of integers
-  
+
   solve: function (A) {
     function partition(start, end) {
       function swap(i, j) {
@@ -81,3 +81,6 @@ module.exports = {
     return A;
   },
 };
+
+// time complexity: O(n log n) in average and O(n^2) in worst case
+// space complexity: O(log n) in average and O(n) in worst case
