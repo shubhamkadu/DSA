@@ -84,3 +84,6 @@ module.exports = {
     return ans;
   },
 };
+
+// time complexity O(n log n) where n is the number of elements in the array A
+// space complexity O(n) for storing the string representations of the numbers in the array A

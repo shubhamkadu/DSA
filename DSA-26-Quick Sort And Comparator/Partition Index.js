@@ -67,3 +67,11 @@ function partition(arr) {
 
   return i;
 }
+
+// time complexity: O(n)
+// space complexity: O(1)
+
+let arr = [6, 2, 0, 4, 5];
+let partitionIndex = partition(arr);
+console.log("Valid");
+console.log("A =", arr, "and partitionIndex =", partitionIndex);
