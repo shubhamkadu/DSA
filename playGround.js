@@ -3,35 +3,25 @@ module.exports = {
   //param B : array of integers
   //return an integer
   solve: function (A) {
-
-    function maxLength(arr){
-      let max = 0
-      for(let i = 0;i<A.length;i++){
-        if(arr[i]>max) max = arr[i]
-      }
-      return max
-    }
-
-    let maxlen = maxLength(A);
-    let freArr = new Array(maxlen + 1).fill(0);
-    console.log(freArr);
-
-    for (let i = 0; i < A.length; i++) {
-      freArr[A[i]]++;
-    }
-
-    let idx = 0
-    for(let i = 0;i<freArr.length;i++){
-      let f = freArr[i]
-      for(let k = 0;k<f;k++){
-        A[idx] = i
-        idx++
+    let start= 1
+    let end = A
+    let ans = 0
+    while(start<=end){
+      let mid = start+Math.floor((end-start)/2)
+      if(mid*mid<A){
+        ans = mid
+        start = mid+1
+      }else if(mid*mid>A){
+        end= mid-1
+      }else{
+        return mid
       }
     }
-    return A
+    return ans
   },
 };
 
-A = [10,8,9];
+
+A = 24;
 
 console.log(module.exports.solve(A));
