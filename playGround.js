@@ -2,26 +2,27 @@ module.exports = {
   //param A : integer
   //param B : array of integers
   //return an integer
-  solve: function (A) {
-    let start= 1
-    let end = A
+  solve: function (A, B) {
+    let start = 0
+    let end = A.length-1
+    console.log(end)
     let ans = 0
     while(start<=end){
-      let mid = start+Math.floor((end-start)/2)
-      if(mid*mid<A){
+      let mid = start+ Math.floor((end-start)/2)
+
+      if(A[mid]>=B){
         ans = mid
-        start = mid+1
-      }else if(mid*mid>A){
-        end= mid-1
+        end = mid-1
       }else{
-        return mid
+        start = mid+1
       }
     }
-    return ans
+    return ans 
   },
 };
 
 
-A = 24;
+A = [1, 3, 5, 6];
+B = 7; 
 
-console.log(module.exports.solve(A));
+console.log(module.exports.solve(A, B));
