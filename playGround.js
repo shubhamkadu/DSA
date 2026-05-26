@@ -2,49 +2,40 @@ module.exports = {
   //param A : integer
   //param B : array of integers
   //return an integer
-  MinimumDistBwtTwoStall: function MinimumDistBwtTwoStall(arr) {
-    let MinDist = 0;
-    for (let i = 0; i < arr.length - 1; i++) {
-      let dist = arr[i] - arr[i + 1];
-      MinDist = Math.min(dist, MinDist);
-    }
-    return MinDist;
-  },
 
-  IsPossible: function IsPossible(arr, mid, k) {
-    let count = 0;
-    let sum = 0;
-    for (let dist of arr) {
-      sum += dist;
-      if (sum >= mid) {
-        sum = dist;
-        count++;
-      }
-    }
-    if (count < k) {
-      return false;
-    }
-
-    return true;
-  },
-
-  solve: function (A, B) {
-    let start = new MinimumDistBwtTwoStall(A);
+  solve: function (A) {
+    let start = 0;
     let end = A.length - 1;
-    let ans = -1;
+    let ans = 0;
     while (start <= end) {
       let mid = start + Math.floor((end - start) / 2);
-      if (IsPossible(A, mid, B)) {
-        ans = mid;
-        start = mid + 1;
+
+      if (
+        mid == 0 ||
+        mid == A.length - 1 ||
+        (A[mid] !== A[mid - 1] && A[mid] !== A[mid + 1])
+      )
+        return mid;
+
+      if (A[mid] == A[mid - 1]) {
+        if ((mid - 1) % 2 == 0) {
+          start = mid + 1;
+          ans = mid;
+        } else {
+          end = mid - 2;
+        }
       } else {
-        end = mid - 1;
+        if (mid % 2 == 0) {
+          start = mid + 2;
+        } else {
+          end = mid - 1;
+        }
       }
     }
   },
 };
 
-A = [1, 2, 3, 4, 5];
-B = 3;
+A = [1,1,2,2,4,4,5,5,3,6,6,7,7];
 
-console.log(module.exports.solve(A, B, C));
+
+console.log(module.exports.solve(A));
