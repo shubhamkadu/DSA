@@ -69,3 +69,7 @@ module.exports = {
 
 	}
 };
+
+// Time Complexity: O(N) Linear Traversal: The while loop visits every single node in the linked list exactly once.Variable (N): Where (N) represents the total number of nodes inside the linked list.
+
+// Space Complexity: O(N) Auxiliary Space: The code creates an empty string variable output.String Growth: As the loop iterates, it appends each node's data into this string. By the end of the traversal, the output string holds a copy of all values, requiring space proportional to the size of the list.
